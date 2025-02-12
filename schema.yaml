@@ -13,9 +13,6 @@ COLUMNS:
   humidity: float64
   precipitation: float64
   weather_description: object
-  "Unnamed: 14": float64
   Traffic_Level: object
   "Distance (km)": float64
-
-TARGET_COLUMN:
   TARGET: object
