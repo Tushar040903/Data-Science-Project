@@ -16,3 +16,6 @@ COLUMNS:
   Traffic_Level: object
   "Distance (km)": float64
   TARGET: object
+
+TARGET_COLUMN:
+  name: TARGET
