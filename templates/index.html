@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Delivery Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: 700;
+    }
+    form {
+      display: grid;
+      grid-gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: #555;
+    }
+    .form-group input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border 0.3s;
+    }
+    .form-group input:focus {
+      border-color: #6a82fb;
+      outline: none;
+    }
+    .btn {
+      padding: 15px;
+      background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Food Delivery Time Prediction</h2>
+    <form action="/predict" method="post">
+      <div class="form-group">
+        <label for="Delivery_person_ID">Delivery Person ID</label>
+        <input type="text" id="Delivery_person_ID" name="Delivery_person_ID" required>
+      </div>
+      <div class="form-group">
+        <label for="Delivery_person_Age">Delivery Person Age</label>
+        <input type="number" step="any" id="Delivery_person_Age" name="Delivery_person_Age" required>
+      </div>
+      <div class="form-group">
+        <label for="Delivery_person_Ratings">Delivery Person Ratings</label>
+        <input type="number" step="any" id="Delivery_person_Ratings" name="Delivery_person_Ratings" required>
+      </div>
+      <div class="form-group">
+        <label for="Restaurant_latitude">Restaurant Latitude</label>
+        <input type="number" step="any" id="Restaurant_latitude" name="Restaurant_latitude" required>
+      </div>
+      <div class="form-group">
+        <label for="Restaurant_longitude">Restaurant Longitude</label>
+        <input type="number" step="any" id="Restaurant_longitude" name="Restaurant_longitude" required>
+      </div>
+      <div class="form-group">
+        <label for="Delivery_location_latitude">Delivery Location Latitude</label>
+        <input type="number" step="any" id="Delivery_location_latitude" name="Delivery_location_latitude" required>
+      </div>
+      <div class="form-group">
+        <label for="Delivery_location_longitude">Delivery Location Longitude</label>
+        <input type="number" step="any" id="Delivery_location_longitude" name="Delivery_location_longitude" required>
+      </div>
+      <div class="form-group">
+        <label for="Type_of_order">Type of Order</label>
+        <input type="text" id="Type_of_order" name="Type_of_order" required>
+      </div>
+      <div class="form-group">
+        <label for="Type_of_vehicle">Type of Vehicle</label>
+        <input type="text" id="Type_of_vehicle" name="Type_of_vehicle" required>
+      </div>
+      <div class="form-group">
+        <label for="temperature">Temperature</label>
+        <input type="number" step="any" id="temperature" name="temperature" required>
+      </div>
+      <div class="form-group">
+        <label for="humidity">Humidity</label>
+        <input type="number" step="any" id="humidity" name="humidity" required>
+      </div>
+      <div class="form-group">
+        <label for="precipitation">Precipitation</label>
+        <input type="number" step="any" id="precipitation" name="precipitation" required>
+      </div>
+      <div class="form-group">
+        <label for="weather_description">Weather Description</label>
+        <input type="text" id="weather_description" name="weather_description" required>
+      </div>
+      <div class="form-group">
+        <label for="Traffic_Level">Traffic Level</label>
+        <input type="text" id="Traffic_Level" name="Traffic_Level" required>
+      </div>
+      <div class="form-group">
+        <label for="Distance">Distance (km)</label>
+        <input type="number" step="any" id="Distance" name="Distance" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn">Predict</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

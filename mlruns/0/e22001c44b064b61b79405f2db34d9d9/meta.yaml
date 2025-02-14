@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/tusha/OneDrive/Desktop/Data-Science-Project/mlruns/0/e22001c44b064b61b79405f2db34d9d9/artifacts
+end_time: 1739535402624
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e22001c44b064b61b79405f2db34d9d9
+run_name: lyrical-crow-838
+run_uuid: e22001c44b064b61b79405f2db34d9d9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739535395495
+status: 3
+tags: []
+user_id: tusha
